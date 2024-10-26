@@ -21,7 +21,7 @@ export function ViewMovie() {
         <>
           <h1 className="text-4xl font-bold mb-8">{movie?.name}</h1>
           <div className="w-full max-w-[300px] space-y-6">
-            <MovieCard movie={movie} alwaysDisplayInfo />
+            <MovieCard movie={movie} />
             <Button variant="outline" onClick={() => navigate('/')}>Voltar</Button>
           </div>
         </>

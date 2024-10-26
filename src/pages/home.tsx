@@ -27,7 +27,7 @@ export function Home() {
         {movies?.map((movie) => (
           <div key={movie.id} className="flex justify-center sm:justify-normal">
             <div className="w-full max-w-[300px]">
-              <MovieCard movie={movie} />
+              <MovieCard movie={movie} href={`/movie/${movie.id}`} />
             </div>
           </div>
         ))}
