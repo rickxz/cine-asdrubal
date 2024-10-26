@@ -1,50 +1,87 @@
-# React + TypeScript + Vite
+# Cine Asdrubal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicação moderna de gerenciamento de filmes construída com React e TypeScript, apresentando uma bela interface com tema escuro e operações CRUD completas.
 
-Currently, two official plugins are available:
+## Índice
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Visão Geral](#visão-geral)
+  - [Captura de Tela](#captura-de-tela)
+  - [Funcionalidades Principais](#funcionalidades-principais)
+  - [Tecnologias Utilizadas](#tecnologias-utilizadas)
+  - [Detalhamento Técnico](#detalhamento-técnico)
+- [Começando](#começando)
+  - [Pré-requisitos](#pré-requisitos)
+  - [Instalação](#instalação)
 
-## Expanding the ESLint configuration
+## Visão Geral
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Cine Asdrubal é um sistema elegante de gerenciamento de filmes que permite aos usuários criar, ler, atualizar e excluir entradas de filmes com uma interface bonita e responsiva.
 
-- Configure the top-level `parserOptions` property like this:
+### Captura de Tela
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+![Captura de Tela do Cine Asdrubal](./public/screenshot.png)
+
+### Funcionalidades Principais
+
+- 🎬 Navegue pela coleção de filmes com layouts de cards bonitos
+- 🔍 Pesquise filmes por ID
+- ➕ Adicione novos filmes com validação de formulário
+- ✏️ Edite detalhes de filmes existentes
+- 🗑️ Exclua filmes com diálogo de confirmação
+- 📱 Design totalmente responsivo
+- 🌙 Interface otimizada com tema escuro
+
+### Tecnologias Utilizadas
+
+- ⚛️ **[React](https://react.dev/)** - Uma biblioteca JavaScript para construção de interfaces
+- 🔷 **[TypeScript](https://www.typescriptlang.org/)** - JavaScript com sintaxe para tipos
+- 🎨 **[Tailwind CSS](https://tailwindcss.com/)** - Framework CSS utilitário
+- 🧩 **[shadcn/ui](https://ui.shadcn.com/)** - Componentes de UI reutilizáveis
+- 📝 **[React Hook Form](https://react-hook-form.com/)** - Formulários com validação fácil de usar
+- ✅ **[Zod](https://zod.dev/)** - Validação de esquemas com TypeScript
+- ⚡ **[Vite](https://vitejs.dev/)** - Ferramentas de frontend de próxima geração
+- 🎯 **[Lucide Icons](https://lucide.dev/)** - Ícones bonitos e consistentes
+
+### Detalhamento Técnico
+
+- **React + TypeScript**: A base da nossa aplicação, fornecendo segurança de tipos e melhor experiência de desenvolvimento.
+  
+- **Tailwind CSS**: Utilizado para desenvolvimento rápido de UI com classes utilitárias, garantindo design consistente e layouts responsivos.
+  
+- **shadcn/ui**: Fornece componentes acessíveis e personalizáveis que se integram perfeitamente com Tailwind CSS.
+  
+- **React Hook Form + Zod**: Gerencia nossos formulários com:
+  - Validação de formulários com segurança de tipos
+  - Gerenciamento eficiente de estado do formulário
+  - Regras de validação baseadas em esquemas
+  
+- **Vite**: Oferece uma experiência de desenvolvimento ultra-rápida com recursos como:
+  - Hot Module Replacement (HMR)
+  - Builds otimizados
+  - Suporte nativo ao TypeScript
+
+## Começando
+
+### Pré-requisitos
+
+- Node.js (v18 ou superior)
+- npm
+
+### Instalação
+
+1. Clone o repositório
+```bash
+git clone https://github.com/rickxz/cine-asdrubal.git
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+2. Instale as dependências
+```bash
+npm install
 ```
+
+3. Inicie o servidor de desenvolvimento
+```bash
+npm run dev
+```
+
+A aplicação estará disponível em `http://localhost:5173`

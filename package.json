@@ -9,6 +9,10 @@
     "lint": "eslint .",
     "preview": "vite preview"
   },
+  "engines": {
+    "node": ">=18",
+    "yarn": "please-use-npm"
+  },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
     "@radix-ui/react-alert-dialog": "^1.1.2",
