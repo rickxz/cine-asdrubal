@@ -6,6 +6,7 @@ import { CreateMovie } from './pages/create-movie'
 import { Toaster } from './components/ui/toaster'
 import { UpdateMovie } from './pages/update-movie'
 import { DeleteMovie } from './pages/delete-movie'
+import { NotFoundPage } from './pages/not-found'
 
 export function App() {
   return (
@@ -19,6 +20,7 @@ export function App() {
             <Route path="/create" element={<CreateMovie />} />
             <Route path="/update" element={<UpdateMovie />} /> 
             <Route path="/delete" element={<DeleteMovie />} /> 
+            <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </main>
 
