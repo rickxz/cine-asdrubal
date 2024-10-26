@@ -27,3 +27,7 @@ export async function updateMovie(id: string, movie: MovieFormData): Promise<Mov
   const response = await api.put<MovieReturnType>(`/movies/${id}`, movie)
   return response.data
 }
+
+export async function deleteMovie(id: string): Promise<void> {
+  await api.delete(`/movies/${id}`)
+}

@@ -81,7 +81,7 @@ export function SearchMovie({ onSearch, children }: SearchMovieProps) {
       { movie && (
         <div className="space-y-4">
           <div className="w-full max-w-xs mx-auto sm:mx-0">
-            <MovieCard movie={movie} />
+            <MovieCard movie={movie} alwaysDisplayInfo />
           </div>
           {children?.(movie)}
         </div>
