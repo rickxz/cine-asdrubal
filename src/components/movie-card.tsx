@@ -23,7 +23,7 @@ export function MovieCard({ movie, href }: MovieCardProps) {
         <div className="aspect-[2/3] relative group">
           {!isImageLoaded && (
             <div className="absolute inset-0 flex items-center justify-center bg-gray-800">
-              <div className="w-16 h-16 border-4 border-gray-300 border-t-transparent border-t-4 rounded-full animate-spin"></div>
+              <div className="size-16 border-4 border-gray-300 border-t-transparent border-t-4 rounded-full animate-spin"></div>
             </div>
           )}
           <img

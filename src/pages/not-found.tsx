@@ -8,9 +8,9 @@ export function NotFoundPage() {
       <div className="text-center space-y-8 max-w-2xl mx-auto">
         {/* Ícones animados */}
         <div className="flex justify-center gap-4 mb-8">
-          <Film className="w-12 h-12 text-red-600 animate-[spin_4s_linear_infinite]" />
-          <Clapperboard className="w-12 h-12 text-red-600 animate-[bounce_2s_ease-in-out_infinite]" />
-          <Film className="w-12 h-12 text-red-600 animate-[spin_4s_linear_infinite_reverse]" />
+          <Film className="size-12 text-red-600 animate-[spin_4s_linear_infinite]" />
+          <Clapperboard className="size-12 text-red-600 animate-[bounce_2s_ease-in-out_infinite]" />
+          <Film className="size-12 text-red-600 animate-[spin_4s_linear_infinite_reverse]" />
         </div>
 
         {/* Mensagem de erro */}
@@ -27,7 +27,7 @@ export function NotFoundPage() {
             {[...Array(5)].map((_, i) => (
               <div
                 key={i}
-                className="w-2 h-2 rounded-full bg-red-600"
+                className="size-2 rounded-full bg-red-600"
                 style={{
                   animation: `pulse 1.5s ease-in-out ${i * 0.2}s infinite`
                 }}
@@ -37,7 +37,7 @@ export function NotFoundPage() {
 
         <Button asChild size="lg" className="gap-2">
           <Link to="/">
-            <Rewind className="w-4 h-4" />
+            <Rewind className="size-4" />
               Voltar para a página principal
           </Link>
         </Button>
