@@ -8,7 +8,7 @@ export function useDoesMovieExists() {
 
   const navigate = useNavigate()
 
-  const { data: movie, isLoading, isError } = useQuery({
+  const { data: movie, isFetching, isError } = useQuery({
     queryKey: ['movie', id],
     queryFn: () => getMovieById(id ?? ''),
   })
@@ -20,7 +20,7 @@ export function useDoesMovieExists() {
     }
 
     document.title = `${movie?.name} - Cine Asdrubal`
-  }, [isLoading, movie])
+  }, [isFetching, movie])
 
-  return { movie, isLoading }
+  return { movie, isFetching }
 }

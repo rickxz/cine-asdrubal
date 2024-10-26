@@ -4,6 +4,7 @@ import { Home } from './pages/home'
 import { ViewMovie } from './pages/view-movie'
 import { CreateMovie } from './pages/create-movie'
 import { Toaster } from './components/ui/toaster'
+import { UpdateMovie } from './pages/update-movie'
 
 export function App() {
   return (
@@ -15,6 +16,7 @@ export function App() {
             <Route path="/" element={<Home />} />
             <Route path="/movie/:id" element={<ViewMovie />} />
             <Route path="/create" element={<CreateMovie />} />
+            <Route path="/update" element={<UpdateMovie />} /> 
           </Routes>
         </main>
 

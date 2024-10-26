@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom'
-import { Movie } from '../services/movies-service'
+import { MovieReturnType } from '../services/movies-service'
 import { Card } from './ui/card'
 import { twMerge } from 'tailwind-merge'
 import { useState } from 'react'
 
 type MovieCardProps = {
-  movie: Movie
+  movie: MovieReturnType
   alwaysDisplayInfo?: boolean
 }
 
