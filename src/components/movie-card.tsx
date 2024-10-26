@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { MovieReturnType } from '../services/movies-service'
 import { Card } from './ui/card'
 import { twMerge } from 'tailwind-merge'
@@ -12,10 +12,11 @@ type MovieCardProps = {
 export function MovieCard({ movie, alwaysDisplayInfo }: MovieCardProps) {
   const imageUrl = `https://picsum.photos/seed/${movie.id}/300/450`;
   const [isImageLoaded, setIsImageLoaded] = useState(false);
+  const currentPath = useLocation().pathname;
 
   return (
     <Card className="overflow-hidden bg-gray-900 border-gray-800 hover:border-gray-700 transition-colors w-full">
-      <Link to={`/movie/${movie.id}`} className="block">
+      <Link to={alwaysDisplayInfo ? currentPath : `/movie/${movie.id}`} className="block">
         <div className="aspect-[2/3] relative group">
           {!isImageLoaded && (
             <div className="absolute inset-0 flex items-center justify-center bg-gray-800">

@@ -9,6 +9,7 @@ import { Button } from './ui/button'
 import { LoaderCircle } from 'lucide-react'
 import axios from 'axios'
 import { MovieCard } from './movie-card'
+import { Link } from 'react-router-dom'
 
 const searchSchema = z.object({
   id: z.string().min(1, 'ID é obrigatório')
@@ -69,6 +70,12 @@ export function SearchMovie({ onSearch, children }: SearchMovieProps) {
                       Buscar
                       { form.formState.isSubmitting && <LoaderCircle className="h-5 w-5 animate-spin" /> }
                     </Button>
+
+                    <Link to="/" className="w-full sm:w-auto flex gap-2">
+                      <Button type="button" variant="outline" className="w-full">
+                        Voltar
+                      </Button>
+                    </Link>
                   </div>
                 </FormControl>
                 <FormMessage />

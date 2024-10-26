@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form'
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from './ui/form'
 import { Input } from './ui/input'
 import { Button } from './ui/button'
+import { Link } from 'react-router-dom'
 
 type MovieFormProps = {
   defaultValues?: MovieFormData
@@ -70,9 +71,18 @@ export function MovieForm({ defaultValues, onSubmit, submitLabel }: MovieFormPro
           )}
         />
 
-        <Button type="submit" className="w-full">
-          {submitLabel}
-        </Button>
+        <div className="flex item-center justify-between gap-4">
+          <Link to="/" className="w-full">
+            <Button variant="outline" type="button" className="w-full">
+              Voltar
+            </Button>
+          </Link>
+
+          <Button type="submit" className="w-full">
+            {submitLabel}
+          </Button>
+        </div>
+
       </form>
     </Form>
   )
